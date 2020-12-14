@@ -1,0 +1,2 @@
+# pokedex
+simple react project
