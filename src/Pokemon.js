@@ -11,7 +11,9 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: "20px",
       maxWidth: 700,
       margin: "auto",
-      backgroundColor: "#c8f3e7a3",
+    },
+    container: {
+      paddingTop: "20px",
     },
     media: {
       margin: "auto",
@@ -24,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
     },
     table: {
         minWidth: 650,
-        backgroundColor: "#c8f3e7a3",
     },
 }));
 
@@ -64,8 +65,7 @@ const Pokemon = (props) => {
 
     return (
       <>
-        
-        
+       <div className = { classes.container }>
         <Mui.Card className={classes.root}>
         <Mui.CardHeader
             avatar={
@@ -82,7 +82,7 @@ const Pokemon = (props) => {
         <Mui.CardMedia
             className={classes.media}
             image={ fullImageUrl} 
-            style= {{ width: "400px", height: "400px" }}
+            style= {{ width: "350px", height: "350px" }}
         />
         <Mui.CardContent />
         <Mui.TableContainer component={Paper}>
@@ -100,6 +100,7 @@ const Pokemon = (props) => {
             </Mui.Table>
         </Mui.TableContainer>
         </Mui.Card>
+       </div>
       </>
     );
   }
