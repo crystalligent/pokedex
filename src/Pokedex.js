@@ -17,7 +17,7 @@ import SearchIcon from "@material-ui/icons/Search";
 
 const useStyles = makeStyles(theme => ({
     pokedexContainer: {
-      paddingTop: "20px",
+      paddingTop: "100px",
       paddingLeft: "50px",
       paddingRight: "50px",
     },
@@ -35,6 +35,7 @@ const useStyles = makeStyles(theme => ({
       marginTop: "5px",
       marginBottom: "5px",
       borderRadius: "25px",
+      margin: "auto",
     },
     searchIcon: {
       alignSelf: "flex-end",
@@ -96,7 +97,7 @@ const Pokedex = (props) => {
 
   return (
     <>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar> 
           <div className = { classes.searchContainer }>
             <SearchIcon  className = { classes.searchIcon } />
