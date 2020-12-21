@@ -73,11 +73,20 @@ const Pokemon = (props) => {
                 { name.charAt(0) }
             </Mui.Avatar>
             }
+            action={
+              <Mui.Grid container justify="flex-end">
+                <Mui.Button variant = "contained" 
+                onClick={() => history.push("/pokedex")}>
+                back to pokedex
+                </Mui.Button>
+              </Mui.Grid>
+            }
             title={
             <Mui.Typography component="h5" variant="h5">
               {toFirstCharUppercase(name)}
             </Mui.Typography>
             }
+            
         />
         <Mui.CardMedia
             className={classes.media}
@@ -108,14 +117,6 @@ const Pokemon = (props) => {
     {pokemon === undefined && <Mui.CircularProgress />}
     {pokemon !== undefined && pokemon && generatePokemonJSX()}
     {pokemon === false && <Mui.Typography> Pokemon not found</Mui.Typography>}
-    {pokemon !== undefined && (
-      <Mui.Grid container justify="flex-end">
-        <Mui.Button variant = "contained" 
-        onClick={() => history.push("/pokedex")}>
-        back to pokedex
-        </Mui.Button>
-      </Mui.Grid>
-    )}
   </>);
 
 };
