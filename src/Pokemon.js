@@ -23,10 +23,7 @@ const useStyles = makeStyles((theme) => ({
     },
     backButton: {
       alignItems: "right",
-    },
-    table: {
-        minWidth: 650,
-    },
+    }
 }));
 
 const Pokemon = (props) => {
