@@ -81,7 +81,7 @@ const Pokedex = (props) => {
     const { id, name, sprite } = pokemonData[pokemonId];
     return (
       <Grid item xs= {4} key={pokemonId}>
-        <Card onClick = {() => history.push(`/${pokemonId}`)} >
+        <Card onClick = {() => history.push(`/pokedex/${pokemonId}`)} >
             <CardMedia 
               className = {classes.cardMedia}
               image= {sprite}

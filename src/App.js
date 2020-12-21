@@ -9,7 +9,7 @@ function App() {
         <Route exact path ="/pokedex" render= {(props) => <Pokedex {...props} />} />
         <Route 
           exact
-          path ="/:pokemonId" 
+          path ="/pokedex/:pokemonId" 
           render= {(props) => <Pokemon {...props} />}
         />
       </Switch>
