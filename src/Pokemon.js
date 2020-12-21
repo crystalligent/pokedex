@@ -111,7 +111,7 @@ const Pokemon = (props) => {
     {pokemon !== undefined && (
       <Mui.Grid container justify="flex-end">
         <Mui.Button variant = "contained" 
-        onClick={() => history.push("/")}>
+        onClick={() => history.push("/pokedex")}>
         back to pokedex
         </Mui.Button>
       </Mui.Grid>
