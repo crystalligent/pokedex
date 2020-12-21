@@ -1,10 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import ShowPokemon from './show_pokemon'
+import App from "./App";
+import { Router } from "react-router-dom";
+import { createBrowserHistory } from "history";
+//import * as serviceWorker from "./serviceWorker";
+
+const history = createBrowserHistory();
 
 ReactDOM.render(
-  <ShowPokemon>
-  </ShowPokemon>
-,
-  document.getElementById('root')
-)
+  <React.StrictMode>
+    <Router history= { history }>
+      <App />
+    </Router>
+  </React.StrictMode>,
+    document.getElementById("root")
+);
+
+//serviceWorker.unregister();
